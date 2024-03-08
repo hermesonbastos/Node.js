@@ -1,12 +1,15 @@
 const fs = require("fs");
 
-fs.rename("arquivo.txt", "novonome.txt", (err) => {
+const arquivo = "arquivo.txt";
+const novoarquivo = "novonome.txt";
+
+fs.rename(arquivo, novoarquivo, (err) => {
 
   if(err) {
     console.log(err);
     return;
   }
 
-  console.log("Arquivo renomeado com sucesso!");
+  console.log(`Arquivo ${arquivo} renomeado com sucesso para ${novoarquivo}!`);
 
 })
